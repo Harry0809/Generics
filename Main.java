@@ -4,12 +4,14 @@ public class Main {
 
 	public static void main(String[] args) {
 		System.out.println("welcome to generics program");
-		MaxString maxString = new MaxString();
-		System.out.println("Test case 1");
-		maxString.maxvalue("Peach", "Apple", "Banana");
-		System.out.println("Test case 2");
-		maxString.maxvalue("Apple", "Zach", "Banana");
-		System.out.println("Test case 3");
-		maxString.maxvalue("Apple", "Banana", "Class");
+		Integer[] intArray = { 5, 7, 6, 8 };
+		Float[] floatArray = { 5.3F, 9.2F, 3.4F, 8.6F };
+		String[] stringArray = { "vipul", "ajay", "sam", "anusha" };
+		MaxValue<Integer> maxValue = new MaxValue<>(intArray);
+		maxValue.testMaximum();
+		MaxValue<Float> maxValue1 = new MaxValue<>(floatArray);
+		maxValue1.testMaximum();
+		MaxValue<String> maxValue2 = new MaxValue<>(stringArray);
+		maxValue2.testMaximum();
 	}
 }
